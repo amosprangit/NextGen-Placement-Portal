@@ -1,0 +1,10 @@
+node_modules
+.env
+uploads/resumes/*
+uploads/logos/*
+uploads/noc/*
+!uploads/resumes/.gitkeep
+!uploads/logos/.gitkeep
+!uploads/noc/.gitkeep
+*.log
+.DS_Store
