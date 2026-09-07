@@ -1,6 +1,14 @@
 import axios from "axios";
 
-const baseURL = import.meta.env.VITE_API_URL || "/api";
+// Always use the same-origin /api path.
+//
+// Production:
+// https://next-gen-placement-portal.vercel.app/api
+//        ↓ Vercel rewrite
+// http://15.135.189.44:5000/api
+//
+// This prevents the browser from making an insecure HTTP request.
+const baseURL = "/api";
 
 export const api = axios.create({
   baseURL,
@@ -23,6 +31,7 @@ api.interceptors.request.use((config) => {
 // Normalize backend errors.
 api.interceptors.response.use(
   (response) => response,
+
   (error) => {
     const payload = error.response?.data;
 
