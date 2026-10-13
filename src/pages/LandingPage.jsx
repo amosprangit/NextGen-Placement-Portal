@@ -5,6 +5,7 @@ import Perspectives from '../components/landing/Perspectives.jsx'
 import Process from '../components/landing/Process.jsx'
 import Cta from '../components/landing/Cta.jsx'
 import Footer from '../components/landing/Footer.jsx'
+import OurPlacements from '../components/landing/OurPlacements.jsx'
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,7 @@ export default function LandingPage() {
         <Hero />
         <Drives />
         <Perspectives />
+        <OurPlacements />
         <Process />
         <Cta />
       </main>
